@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【官方授权】海外广告账户开通 | 稳定低至 3%</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 颜色变量定义 --- */
+        :root {
+            --dark-bg: #0a0a0a;             /* 更深的背景色 */
+            --card-bg: #1e1e1e;             
+            --primary-text: #f0f0f0;        
+            --highlight-color: #00ff99;     /* 科技绿 */
+            --secondary-accent: #ffb300;    /* 金色 */
+            --border-color: #333333;        
+        }
+        
+        /* --- 全局重置与基础样式 --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--primary-text);
+            background-color: var(--dark-bg);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 100px 0; 
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        /* --- 按钮通用样式 (扁平化 + 悬浮光晕) --- */
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            font-size: 1.2em;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            border: 2px solid transparent;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background-color: var(--highlight-color);
+            color: var(--dark-bg);
+            border-color: var(--highlight-color);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 20px var(--highlight-color);
+            transform: translateY(-2px);
+            background-color: #00e687;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-accent);
+            color: var(--dark-bg);
+            border-color: var(--secondary-accent);
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 0 0 20px var(--secondary-accent);
+            transform: translateY(-2px);
+            background-color: #e6a200;
+        }
+
+        /* --- 标题样式 --- */
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+            color: var(--highlight-color);
+            font-size: 3.5em;
+            margin-bottom: 80px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* --- 头部导航栏 --- */
+        header {
+            background: var(--card-bg);
+            padding: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: 800;
+            color: var(--highlight-color);
+            font-family: 'Oswald', sans-serif;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-text);
+            margin-left: 35px;
+            transition: color 0.3s;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--secondary-accent);
+        }
+
+        /* --- 核心价值区 (Hero) - 分栏布局 --- */
+        .hero {
+            background: var(--dark-bg);
+            padding: 180px 0;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            border-bottom: none;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            max-width: 60%;
+        }
+
+        .hero-text h1 {
+            font-size: 4.8em;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            color: white;
+        }
+
+        .hero-text h2 {
+            font-size: 1.8em;
+            font-weight: 400;
+            margin-bottom: 40px;
+            color: #bbb;
+            text-transform: none;
+            text-align: left;
+        }
+
+        .hero-cta {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .highlight-bar {
+            background-color: var(--card-bg);
+            color: var(--highlight-color);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.4em;
+            font-weight: 700;
+            border: 1px solid var(--highlight-color);
+        }
+
+        /* --- 账户类型区域 (服务项目) --- */
+        .services {
+            background-color: var(--card-bg);
+        }
+        
+        .account-type {
+            margin-bottom: 80px;
+            padding: 40px;
+            background: #151515;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .account-type h3 {
+            font-size: 2.2em;
+            color: var(--secondary-accent);
+            text-align: left;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--highlight-color);
+            padding-left: 20px;
+            font-family: 'Oswald', sans-serif;
+        }
+        
+        .type-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .type-card {
+            background: var(--dark-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            transition: all 0.3s;
+            border-top: 4px solid var(--secondary-accent);
+        }
+        
+        .type-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--highlight-color);
+            box-shadow: 0 0 25px rgba(0, 255, 153, 0.2);
+        }
+        
+        .type-card.personal {
+            border-top: 4px solid var(--highlight-color);
+        }
+
+        .type-card h4 {
+            font-size: 1.4em;
+            color: var(--highlight-color);
+            margin-bottom: 10px;
+        }
+        
+        /* --- 费率优势区 (左右分栏) --- */
+        .pricing {
+            background-color: var(--dark-bg);
+        }
+        
+        .pricing-content-split {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .pricing-text {
+            flex: 1;
+        }
+        
+        .pricing-text h3 {
+            color: var(--secondary-accent);
+            font-size: 2.5em;
+            margin-bottom: 25px;
+        }
+        
+        .pricing-text p {
+            color: #ccc;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .pricing-cards-wrapper {
+            flex: 1.2;
+            display: flex;
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+            width: 50%;
+            text-align: center;
+        }
+        
+        .pricing-card h4 {
+            font-size: 1.8em;
+            color: var(--primary-text);
+            margin-bottom: 15px;
+        }
+
+        .rate {
+            font-size: 4em;
+            font-weight: 800;
+            color: var(--secondary-accent); 
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+
+        .primary-card {
+            border: 3px solid var(--highlight-color);
+            box-shadow: 0 0 40px rgba(0, 255, 153, 0.3);
+        }
+        
+        .platform-note {
+            font-weight: 600;
+            color: var(--highlight-color);
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+        .disclaimer {
+            margin-top: 40px;
+            font-style: italic;
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* --- 支付方式区块 --- */
+        .payment {
+            background-color: var(--card-bg);
+            padding: 100px 0;
+        }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .payment-card {
+            background: #151515;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--highlight-color);
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 255, 153, 0.1);
+        }
+
+        .payment-card h4 {
+            color: var(--secondary-accent);
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .payment-card p {
+            color: #ccc;
+            font-size: 1.1em;
+        }
+
+        .payment-icons {
+            margin-top: 15px;
+            font-size: 2.5em;
+            color: var(--highlight-color);
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* --- 合作流程区 --- */
+        .process {
+            background-color: var(--dark-bg);
+        }
+
+        .step-list {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            text-align: center;
+            margin-top: 40px;
+            position: relative;
+            padding: 0 5%;
+        }
+
+        .step-item {
+            flex: 1;
+            padding: 30px 10px;
+            position: relative;
+            background: var(--card-bg);
+            border-radius: 8px;
+            z-index: 10;
+            border: 1px solid #333;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 65px;
+            height: 65px;
+            line-height: 65px;
+            background: var(--highlight-color);
+            color: var(--dark-bg);
+            border-radius: 50%;
+            font-size: 2em;
+            font-weight: 800;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+        }
+
+        .step-item h4 {
+            color: var(--secondary-accent);
+            margin-bottom: 10px;
+            font-size: 1.4em;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .step-list::before {
+            content: '';
+            position: absolute;
+            top: 32%;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: var(--highlight-color);
+            z-index: 1;
+            opacity: 0.5;
+        }
+        
+        /* --- 我们的承诺区 --- */
+        .commitment {
+            background-color: var(--card-bg);
+        }
+
+        .commitment-list {
+            list-style: none;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .commitment-list li {
+            background: #151515;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-left: 6px solid var(--secondary-accent);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            font-size: 1.1em;
+        }
+
+        .commitment-list li strong {
+            color: var(--highlight-color);
+            margin-right: 15px;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+
+        /* --- 联系我们区 --- */
+        .contact {
+            background-color: var(--dark-bg);
+            padding: 100px 0;
+            border-bottom: none;
+        }
+        
+        .contact-info-block {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px;
+            background: #151515;
+            border-radius: 12px;
+            border: 2px solid var(--highlight-color);
+            box-shadow: 0 0 40px rgba(0, 255, 153, 0.2);
+            text-align: center;
+        }
+
+        .contact-info-block h3 {
+            color: var(--secondary-accent);
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .contact-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            text-align: left;
+        }
+
+        .contact-detail {
+            font-size: 1.5em;
+            color: var(--primary-text);
+            margin-bottom: 0;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 5px solid var(--highlight-color);
+        }
+
+        .contact-detail strong {
+            color: var(--secondary-accent);
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .contact-detail a {
+            color: var(--highlight-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-detail a:hover {
+            color: white;
+        }
+        
+        /* --- 页脚 --- */
+        footer {
+            background: var(--dark-bg);
+            color: #666;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* --- 响应式设计 (RWD) --- */
+        @media (min-width: 769px) {
+            .step-list::before {
+                display: block; 
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .hero-text { max-width: 100%; text-align: center; }
+            .hero-text h1 { font-size: 4em; }
+            .hero-content { flex-direction: column; }
+            .hero-cta { justify-content: center; }
+            .pricing-content-split { flex-direction: column; }
+            .pricing-text { text-align: center; }
+            .pricing-cards-wrapper { width: 100%; justify-content: center; }
+        }
+
+        @media (max-width: 768px) {
+            h2 { font-size: 2.5em; }
+            .hero h1 { font-size: 3em; }
+            .hero h2 { font-size: 1.5em; text-align: center; }
+            .hero-text { max-width: 100%; }
+            .hero-cta { flex-direction: column; gap: 15px; }
+            .btn { width: 100%; }
+            .type-grid, .pricing-content-split, .step-list, .contact-details-grid, .payment-grid { 
+                flex-direction: column; 
+                gap: 20px; 
+                grid-template-columns: 1fr;
+            }
+            .pricing-card { width: 100%; }
+            .step-list::before { display: none; }
+            .contact-info-block { padding: 30px; }
+            .contact-detail { font-size: 1.3em; }
+            .rate { font-size: 4em; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">GLOBAL ADS PARTNER</div>
+            <nav>
+                <a href="#services">账户方案</a>
+                <a href="#pricing">费率优势</a>
+                <a href="#payment">充值方式</a>
+                <a href="#process">合作流程</a>
+                <a href="#contact" class="btn btn-secondary">立即洽谈</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>全球数字营销账户，极速开通</h1>
+                <h2>全平台、多类型、高稳定性账户资源一站式供应，保障您的每一次出海投放。</h2>
+                
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">立即获取 $3\%$ 方案</a>
+                    <p class="highlight-bar">Facebook 最低费率 $3\%$ 起</p>
+                </div>
+            </div>
+            
+            <div class="hero-visual" style="width: 40%; text-align: center;">
+                <h3 style="color:var(--highlight-color); font-size: 2.5em; margin-bottom: 0; font-family: 'Oswald', sans-serif;">DATA. DRIVE. PROFIT.</h3>
+                <p style="color:#666; font-size: 1.2em; margin-top: 10px;">（专业数字资产供应）</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>账户资源与专业细分</h2>
+
+            <div class="account-type personal-account">
+                <h3>个人账号服务 (高稳定、多用途、灵活投放)</h3>
+                <div class="type-grid">
+                    <div class="type-card personal">
+                        <h4>Facebook 个人广告号 (白号)</h4>
+                        <p>全新注册的个人账号，状态干净，适合初期测试和小预算投放，成本灵活。</p>
+                    </div>
+                    <div class="type-card personal">
+                        <h4>Facebook 个人账号（二次解封）</h4>
+                        <p>经历过一次封禁并成功申诉恢复，具备强大的抗封经验，适用于注重稳定性的客户。</p>
+                    </div>
+                    <div class="type-card personal">
+                        <h4>Facebook 个人账号（三次解封）</h4>
+                        <p>经历两次以上封禁并成功恢复，抗封等级最高，是追求极限稳定性的投放首选。</p>
+                    </div>
+                    <div class="type-card personal">
+                        <h4>Facebook 个人账号（国家IP）</h4>
+                        <p>采用特定国家 IP 注册和养号，账户权重高，更适合投放特定国家或地区的本地化广告。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-type enterprise-account">
+                <h3>企业/代理商账号服务 (专业认证、高额度、稳定运营)</h3>
+                <div class="type-grid">
+                    <div class="type-card">
+                        <h4>Facebook BM 账户 (商务管理平台)</h4>
+                        <p>多账户管理核心，提供稳定、高额度 BM 平台，支持多广告账户、像素和资产管理，享有绿色申诉通道。</p>
+                    </div>
+                    <div class="type-card">
+                        <h4>Facebook 主页账号 / 公共主页</h4>
+                        <p>提供已养成的高权重主页和公共主页，避免新主页冷启动限制，快速积累互动数据，配合广告投放使用。</p>
+                    </div>
+                    <div class="type-card">
+                        <h4>Google Ads MCC 代理账户</h4>
+                        <p>通过官方授权渠道开通 MCC 账户，快速审核，稳定投放，特别适合电商和游戏类客户。</p>
+                    </div>
+                    <div class="type-card">
+                        <h4>TikTok 官方代理商账户</h4>
+                        <p>官方渠道直接对接，享有平台的最新政策、专属流量扶持和 API 权限，投放更顺畅。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>透明费率：成本控制的秘密</h2>
+            <div class="pricing-content-split">
+                
+                <div class="pricing-text">
+                    <h3>您的每一分预算都至关重要</h3>
+                    <p>我们承诺提供行业内最具竞争力的服务费率，将您的营销成本降至最低。特别是针对 Facebook 平台的大预算客户，我们拥有将服务费压低到 $3\%$ 的独特优势，确保您在市场竞争中保持领先地位。</p>
+                    <p style="color:var(--highlight-color); font-weight: 700;">点击右侧按钮，立即获取您的定制费率报价。</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 20px;">联系我们获取定制报价</a>
+                </div>
+                
+                <div class="pricing-cards-wrapper">
+                    <div class="pricing-card primary-card">
+                        <h4>Facebook 最低费率</h4>
+                        <div class="rate">$3\%$</div>
+                        <p>适用于 **Facebook/Instagram 平台**每月消耗预算高的长期战略合作伙伴，享受最高返点与定制化技术服务。</p>
+                        <p class="platform-note">仅限 Facebook/Instagram 平台</p>
+                    </div>
+                    <div class="pricing-card">
+                        <h4>Google / TikTok 标准费率</h4>
+                        <div class="rate">$5\%$ - $10\%$</div>
+                        <p>适用于 Google Ads 和 TikTok Ads 平台，提供全套开户、稳定维护及基础投放咨询服务。</p>
+                        <p class="platform-note">具体费率需根据平台政策和预算确认</p>
+                    </div>
+                </div>
+            </div>
+            <p class="disclaimer">注：具体费率根据您的投放预算、媒体平台和合作时长而定，请联系我们获取精准报价。</p>
+        </div>
+    </section>
+    
+    <section id="payment" class="payment">
+        <div class="container">
+            <h2>支付方式：灵活便捷，支持全球主流渠道</h2>
+            <div class="payment-grid">
+                
+                <div class="payment-card">
+                    <h4>🚀 数字货币充值</h4>
+                    <p>支持 USDT、USDC、BTC、ETH 等主流加密货币支付，实现快速、低成本跨境充值。</p>
+                    <div class="payment-icons">
+                        <span>₿</span>
+                        <span>Ξ</span>
+                        <span>₮</span>
+                    </div>
+                </div>
+
+                <div class="payment-card">
+                    <h4>💳 境内主流支付</h4>
+                    <p>支持支付宝、微信、对公银行账户等人民币结算方式，流程安全合规，方便境内操作。</p>
+                    <div class="payment-icons">
+                        <span>¥</span>
+                        <span>Ɱ</span>
+                        <span>🏦</span>
+                    </div>
+                </div>
+
+                <div class="payment-card">
+                    <h4>🌐 国际电汇/对公</h4>
+                    <p>支持美元、港币等多种外币对公电汇，满足大额、长期稳定合作的财务需求。</p>
+                    <div class="payment-icons">
+                        <span>$</span>
+                        <span>€</span>
+                        <span>£</span>
+                    </div>
+                </div>
+
+            </div>
+            <p class="disclaimer" style="margin-top: 50px; text-align: center;">请在联系客服确认费率后，选择您偏好的充值方式。</p>
+        </div>
+    </section>
+    
+    <section id="process" class="process">
+        <div class="container">
+            <h2>合作流程：四步快速启动</h2>
+            <div class="step-list">
+                <div class="step-item">
+                    <span class="step-number">1</span>
+                    <h4>⚡ 需求洽谈</h4>
+                    <p>通过您偏好的渠道联系我们，说明您的预算、目标平台及具体需求。</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-number">2</span>
+                    <h4>📈 方案定制</h4>
+                    <p>我们提供定制化账户方案及透明费率报价，双方确认服务细节并签署协议。</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-number">3</span>
+                    <h4>🔑 账户交付</h4>
+                    <p>启动官方绿色通道，快速为您开通稳定账户，并提供首次投放指导与支持。</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-number">4</span>
+                    <h4>🛡️ 持续维护</h4>
+                    <p>长期账户稳定维护，提供专业技术支持，助您应对突发问题，持续优化效果。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="commitment" class="commitment">
+        <div class="container">
+            <h2>保障：我们对您的三大承诺</h2>
+            <ul class="commitment-list">
+                <li><strong>稳定性保障：</strong> 官方绿色通道，账户稳定性行业领先，大幅降低封号风险。</li>
+                <li><strong>价格透明：</strong> 承诺 Facebook $3\%$ 起的超低服务费，无任何隐藏费用，拒绝暴利。</li>
+                <li><strong>极速响应：</strong> 专属客户经理 7x24 小时待命，快速解决您在投放中遇到的所有问题。</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>📞 联系我们 / CONTACT US</h2>
+            <div class="contact-info-block">
+                <h3>24/7 全天候在线响应 - 立即获取报价</h3>
+                
+                <div class="contact-details-grid">
+                    <div class="contact-detail">
+                        <strong>Telegram:</strong> 
+                        <a href="https://t.me/M7HHHH" target="_blank">@M7HHHH (点击直接跳转)</a>
+                    </div>
+                    <div class="contact-detail">
+                        <strong>Wechat (微信):</strong> 
+                        <span>M7HHHH</span>
+                    </div>
+                    <div class="contact-detail">
+                        <strong>WhatsApp:</strong> 
+                        <a href="https://wa.me/8613101234440" target="_blank">+86 13101234440</a>
+                    </div>
+                    <div class="contact-detail">
+                        <strong>电子邮箱 (Email):</strong> 
+                        <a href="mailto:mozi@88.com">mozi@88.com</a>
+                    </div>
+                </div>
+
+                <p style="margin-top: 40px; font-style: italic; color: #888; font-size: 1.1em;">
+                    请直接通过以上任一方式联系我们，我们将为您安排专人进行 $1$ 对 $1$ 快速服务。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GLOBAL ADS PARTNER. All Rights Reserved. | 出海广告账户专业服务商</p>
+        </div>
+    </footer>
+
+</body>
+</html>
